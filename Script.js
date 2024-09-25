@@ -243,6 +243,8 @@ if (numberForLifo == 1) {
 }
 
 
+
+
 // Write a program to store phone manufacturers(Apple,
 // Samsung, Motorola, Nokia, Sony & Haier) in an array.
 // Display the following dropdown / select menu in your
@@ -252,4 +254,167 @@ var mobileBrands = ["Sumsung", "Motorola", "Nokia", "Sony", "Haier"];
 
 for (var i = 1; i < mobileBrands.length; i++) {
     document.write(`<br >${i} .${mobileBrands[i]}`);
+}
+
+
+
+
+// ===============>  1d and 2d Arrays and Loops  <========================
+
+
+// Declare and initialize an empty multidimensional array.
+// (Array of arrays)
+
+const sampleArr = [
+    [],
+    []
+];
+
+
+
+// Declare and initialize a multidimensional array
+// representing  number in 2d Array.
+
+const numArr = [
+    [0, 1, 2, 3],
+    [1, 0, 1, 2],
+    [2, 0, 1, 2],
+];
+
+for (var i = 0; i < numArr.length; i++) {
+    for (var j = 0; j < numArr.length; j++) {
+        console.log(numArr[i][j] + " ");
+    }
+    console.log("<br>");
+}
+
+
+
+// Write a program to print numeric counting from 1 to 10.
+
+for (var i = 1; i < 11; i++) {
+    console.log(`- ${i}`)
+}
+
+
+
+
+// Write a program to print multiplication table of any
+// number using for loop. Table number & length should be
+// taken as an input from user.
+
+var tableNum = +prompt("Enter a number: ");
+
+var lengthOfTable = +prompt("Enter a length of table: ");
+
+if (tableNum > 1 && lengthOfTable > 1) {
+    for (var i = 1; i <= lengthOfTable; i++) {
+        document.write(`${tableNum} * ${i} = ${tableNum * i} <br>`);
+    }
+}
+
+
+
+// Write a program to print items of the following array
+// using for loop:
+// fruits = [“apple”, “banana”, “mango”, “orange”,
+// “strawberry”]
+
+var fruits = ["Apple", "Banana", "Mango", "Orange", "Strawberry"];
+
+for (var i = 0; i < fruits.length; i++) {
+    document.write(`Element at index ${i} is ${fruits[i]} <br>`);
+}
+
+
+// Generate the following series in your browser. See
+// example output.
+// a. Counting: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+
+for (var i = 0; i <= 15; i++) {
+    console.log(`Counting ${i}`);
+}
+
+// b. Reverse counting: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+
+for (var i = 10; i >= 1; i--) {
+    console.log(`Reverse Counting: ${i}`);
+}
+
+// c. Even: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+
+for (var i = 0; i <= 20; i += 2) {
+    console.log(`Even: ${i}`)
+}
+
+// d. Odd: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
+
+for (var i = 1; i < 20; i += 2) {
+    console.log(`Odd: ${i}`);
+}
+
+//e. Series: 2k, 4k, 6k, 8k, 10k, 12k, 14k, 16k, 18k, 20k
+
+for (var i = 2; i <= 20; i += 2) {
+    console.log(`Series: ${i}k`)
+}
+
+// You have an array
+// A = [“cake”, “apple pie”, “cookie”, “chips”, “patties”]
+// Write a program to enable “search by user input” in an
+// array.
+
+// var cookies = ["Cake", "Apple pie", "Cookies", "Chips", "Pattern"];
+
+var searchInput = prompt("Enter a cookie name: ");
+var flag = 0;
+
+for (var i = 0; i < cookies.length; i++) {
+    if (cookies[i] == searchInput) {
+        document.write(`${cookies[i]} is available at ${i} in our bakery`);
+        flag = 1;
+    }
+}
+
+if (flag == 0) {
+    document.write(`Sorry, ${searchInput} is not available in our bakery`);
+}
+
+// Write a program to identify the largest number in the
+// given array.
+// A = [24, 53, 78, 91, 12].
+
+var findLargestNum = [24, 53, 78, 91, 12];
+
+var largestNum = findLargestNum[0];
+
+for (i = 0; i < findLargestNum.length; i++) {
+    if (findLargestNum[i] > largestNum) {
+        largestNum = findLargestNum[i];
+    }
+}
+console.log(largestNum)
+
+
+// Write a program to identify the smallest number in the
+// given array.
+// A = [24, 53, 78, 91, 12]
+
+var smallestNum = [24, 53, 78, 91, 12];
+
+var startIndex = smallestNum[0];
+
+for (var i = 0; i < smallestNum.length; i++) {
+    if (smallestNum[i] < startIndex) {
+        startIndex = smallestNum[i];
+    }
+}
+console.log(startIndex)
+
+
+
+// Write a program to print multiples of 5 ranging 1 to 100.
+
+for (var i = 5; i <= 100; i += 5) {
+    console.log(`Given Range: ${i}`);
 }
