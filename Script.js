@@ -252,10 +252,12 @@ if (numberForLifo == 1) {
 
 var mobileBrands = ["Sumsung", "Motorola", "Nokia", "Sony", "Haier"];
 
-for (var i = 1; i < mobileBrands.length; i++) {
-    document.write(`<br >${i} .${mobileBrands[i]}`);
-}
-
+document.write(`<select><option>${mobileBrands[0]}</option>
+    <option>${mobileBrands[1]}</option>
+    <option>${mobileBrands[2]}</option>
+    <option>${mobileBrands[3]}</option>
+    <option>${mobileBrands[4]}</option>
+ </select>`);
 
 
 
